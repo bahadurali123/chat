@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Project</title>
+    <style>
+        #localVideo {
+            width: 550px;
+            height: 450px;
+            background-color: #222121;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WebRTC Project</h1>
+    <video id="localVideo" autoplay></video>
+    <audio id="localaudio" autoplay></audio>
+    <button id="start">Start</button>
+    <script>
+        // // Get access to the user's camera and microphone
+        // // console.log("navigator", navigator);
+        // // navigator.mediaDevices.getUserMedia = navigator.mediaDevices.getUserMedia;
+        // // navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+        // navigator.mediaDevices.getUserMedia({ 'audio': true, 'video': true })
+        //     .then(function (stream) {
+        //         // Display the stream in a video element
+        //         const audioElement = document.getElementById('localaudio');
+        //         const videoElement = document.getElementById('localVideo');
+        //         audioElement.srcObject = stream;
+        //         videoElement.srcObject = stream;
+        //     })
+        //     .catch(function (error) {
+        //         console.error('Error accessing media devices:', error);
+        //     });
+
+
+        let media = null;
+        const element = { audio: true, video: true };
+        let getmedia = async () => {
+            try {
+                console.log('Function');
+                media = await navigator.mediaDevices.getUserMedia(elements)
+                console.log('Function', media);
+                // let videoElement = document.getElementById('localVideo');
+                // videoElement.srcObject = media;
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        const btn = document.getElementById('start')
+            .addEventListener("click", getmedia);
+        // getmedia();
+
+    </script>
+</body>
