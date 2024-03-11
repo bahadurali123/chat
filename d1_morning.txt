@@ -1,0 +1,26 @@
+Day 1: Morning Session - Introduction to WebRTC
+
+1. Understanding WebRTC:
+WebRTC stands for Web Real-Time Communication and is a collection of APIs and protocols that enable real-time communication between web browsers and applications.
+It allows for peer-to-peer audio, video, and data communication directly between web browsers without the need for plugins or additional software.
+
+2. WebRTC Components:
+getUserMedia: Allows browsers to access the user's camera and microphone to capture audio and video streams.
+RTCPeerConnection: Enables peer-to-peer communication by establishing a connection between two browsers for streaming audio, video, and data.
+RTCDataChannel: Provides a bidirectional data channel between browsers for sending arbitrary data.
+
+3. Architecture of WebRTC:
+WebRTC follows a decentralized architecture, where communication occurs directly between browsers without the need for a centralized server (except for signaling).
+Signaling is the process of exchanging metadata (session description, ICE candidates) between peers to establish a connection.
+
+4. Capabilities of WebRTC:
+Real-time audio and video communication: Enables video conferencing, voice calling, and live streaming directly within web browsers.
+Data exchange: Allows for real-time data exchange between peers, facilitating use cases such as file sharing, gaming, and collaborative editing.
+
+5. Use Cases of WebRTC:
+Video conferencing applications: Enable users to conduct video meetings and conferences directly in the browser.
+Voice calling applications: Facilitate voice calls between users without the need for traditional telephony infrastructure.
+Interactive live streaming: Support real-time streaming of audio and video content to large audiences.
+
+6. Next Steps:
+Now that we have an overview of WebRTC, we'll move on to exploring each component in more detail and start building our first project to capture audio and video streams using getUserMedia.
